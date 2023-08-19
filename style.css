@@ -12,7 +12,6 @@
     box-sizing: border-box;
     min-width: 320px;
     font-family: var(--font-secundaria);
-    overflow-x:hidden;
   }
 
 
@@ -20,7 +19,9 @@
 #scroll-to-top {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    display: flex;
+    right: 10px;
+    padding-left: 20px;
     z-index: 9999;
   }
   
