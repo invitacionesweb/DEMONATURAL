@@ -15,22 +15,18 @@
   }
 
 
-  /* Estilos para la flecha (colócalos aquí o en un archivo de estilos externo) */
+/* Estilos para la flecha (colócalos aquí o en un archivo de estilos externo) */
 #scroll-to-top {
     position: fixed;
     bottom: 20px;
-    display: flex;
-    right: 10px;
-    padding-left: 20px;
+    right: 20px;
     z-index: 9999;
   }
   
   #scroll-to-top img {
     width: 40px; /* Ajusta el tamaño según tu ícono */
     height: 40px;
-    
-   
-  cursor: pointer;
+    cursor: pointer;
   }
   
 
