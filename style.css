@@ -43,8 +43,18 @@
       text-align: center;
       justify-content: center;
       align-items: center;
+      animation-name: texto;
+      animation-duration: 5s;
 
   }
+  @keyframes texto {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
   header .date {
     font-family: var(--font-principal);
     display: flex;
