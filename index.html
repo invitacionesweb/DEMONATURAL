@@ -29,6 +29,13 @@
     <div class="title">
         <h2>Estamos contando los minutos:</h2>
     </div>
+   <div id="cuenta"></div>
+   <!-- Flecha de volver al inicio -->
+   <div id="scroll-to-top">
+    <a href="#inicio">
+    <img src="./img/arrow.png" alt="Volver al inicio">
+    </a>
+    </div>
 
     <!-- LOVESTORY -->
     <div class="lovestory">
@@ -157,6 +164,54 @@
     <footer>
 
     </footer>
+
+
+    <script>
+        // Espera a que se cargue el DOM
+        document.addEventListener("DOMContentLoaded", function () {
+          const scrollToTopBtn = document.querySelector("#scroll-to-top");
+    
+          scrollToTopBtn.addEventListener("click", () => {
+            // Comprueba la compatibilidad con "scroll-behavior"
+            if ("scrollBehavior" in document.documentElement.style) {
+              // Usa el desplazamiento suave del navegador
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              });
+            } else {
+              // Desplazamiento suave de respaldo para navegadores antiguos
+              scrollToTop(0, 600);
+            }
+          });
+    
+          // Función de desplazamiento suave de respaldo para navegadores antiguos
+          function scrollToTop(to, duration) {
+            const start = window.scrollY || document.documentElement.scrollTop;
+            const change = to - start;
+            const increment = 20;
+            let currentTime = 0;
+    
+            const animateScroll = function () {
+              currentTime += increment;
+              const val = Math.easeInOutQuad(currentTime, start, change, duration);
+              window.scrollTo(0, val);
+              if (currentTime < duration) {
+                requestAnimationFrame(animateScroll);
+              }
+            };
+    
+            Math.easeInOutQuad = function (t, b, c, d) {
+              t /= d / 2;
+              if (t < 1) return c / 2 * t * t + b;
+              t--;
+              return -c / 2 * (t * (t - 2) - 1) + b;
+            };
+    
+            requestAnimationFrame(animateScroll);
+          }
+        });
+      </script>
     <script src="./countdown.js/simplyCountdown.min.js"></script>
     <script src="./countdown.js/countdown.js"></script>
 
