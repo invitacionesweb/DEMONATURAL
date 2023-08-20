@@ -12,6 +12,8 @@
     box-sizing: border-box;
     min-width: 320px;
     font-family: var(--font-secundaria);
+    overflow-x: hidden;
+
   }
 
 
@@ -247,11 +249,13 @@
 .details .img1 {
     width: 220px;
     position: relative;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
+    overflow-x: hidden;
     
 }
 
 .details .img2 {
+    overflow-x: hidden;
     display: none;
 }
 
@@ -387,18 +391,19 @@
 }
 
 .details .img1 {
-    width: 220px;
-    position: absolute;
-    padding-left:260px;
-    padding-bottom: 280px;
+    width: 160px;
+    overflow-x: hidden;
+
 }
 
 .details .img2 {
     display: block;
     width: 220px;
     position: absolute;
-    padding-right:260px;
-    padding-top: 320px;
+    margin-right:260px;
+    margin-top: 320px;
+    overflow-x: hidden;
+
 }
 
 .details .botones {
