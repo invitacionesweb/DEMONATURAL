@@ -6,32 +6,18 @@
   }
 
   body {
+    width: 100vw;
     background-color: var(--color-principal);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    min-width: 320px;
+
     font-family: var(--font-secundaria);
     overflow-x: hidden;
-    min-width: 320px;
 
   }
 
 
-/* Estilos para la flecha (colócalos aquí o en un archivo de estilos externo) */
-#scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 9999;
-  }
-  
-  #scroll-to-top img {
-    width: 40px; /* Ajusta el tamaño según tu ícono */
-    height: 40px;
-    cursor: pointer;
-  }
-  
 
 /* HEADER */
 
@@ -44,7 +30,7 @@
       justify-content: center;
       align-items: center;
       animation-name: texto;
-      animation-duration: 5s;
+      animation-duration: 8s;
 
   }
   @keyframes texto {
@@ -59,13 +45,13 @@
     font-family: var(--font-principal);
     display: flex;
     flex-direction: row;
-    font-size: 7rem;
+    font-size: 6rem;
     gap: 40px;
     justify-content: center;
     align-items: center;
 }
    header img {
-       width: 400px;
+       width: 40vw;
        margin: 14px 0;
    }
    header .date p{
@@ -150,6 +136,7 @@
 }
 
  #cuenta {
+     width: 100vw;
      display: flex;
      justify-content: center;
      margin: 0px;
@@ -200,7 +187,7 @@
 
 }
 .lovestory img {
-    width: 100px;
+    width: 30vw;
 }
 
 /* DETAILS */
@@ -253,11 +240,6 @@
     margin-bottom: 20px;
     overflow-x: hidden;
     
-}
-
-.details .img2 {
-    overflow-x: hidden;
-    display: none;
 }
 
 .dresscode {
@@ -374,7 +356,7 @@
     }
 
     header img {
-        width: 320px;
+        width: 80vw;
     }
 
 
@@ -395,17 +377,6 @@
 
 .details .img1 {
     width: 160px;
-    overflow-x: hidden;
-
-}
-
-.details .img2 {
-    display: block;
-    width: 220px;
-    position: absolute;
-    margin-right:260px;
-    margin-top: 320px;
-    overflow-x: hidden;
 
 }
 
@@ -422,7 +393,6 @@
     flex-direction: column;
   
 }
-
 
 .block .botones {
     flex-direction: column;
