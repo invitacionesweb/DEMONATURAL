@@ -9,10 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+
+
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
-
-
+    
     <header>
         <div class="date">
             <p>19</p>
@@ -21,7 +24,9 @@
         </div>
         <img src="./img/names.png" alt="nombres">
         <a class="boton" href="">AGENDAR</a>
+        
     </header>
+
 
 
     <!-- COUNTDWON -->
@@ -38,7 +43,7 @@
     </div>
 
     <!-- LOVESTORY -->
-    <div class="lovestory">
+    <div data-aos="fade-up" class="lovestory">
 
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam distinctio rem qui saepe suscipit! Deleniti vel asperiores eligendi assumenda maxime eum corrupti, quo, eos ducimus quos non sit rerum distinctio!
         Ducimus totam eaque nihil nemo reprehenderit quia? Nobis aspernatur maiores modi suscipit aperiam, assumenda reiciendis asperiores iusto? Soluta, odit, nihil iure recusandae distinctio tenetur sunt incidunt labore omnis necessitatibus iusto!
@@ -48,7 +53,7 @@
         <img src="./img/iniciales.png" alt="iniciales">
     </div>
 
-    <div class="details">
+    <div data-aos="fade-up" class="details">
         <div class="deco">
             <div class="deco1"></div>
         </div>
@@ -70,8 +75,8 @@
         </div>
     </div>
 
-    <div class="dresscode">
-        <p>Dress code - Elegante</p>
+    <div  class="dresscode">
+        <p data-aos="fade-in">Dress code - Elegante</p>
     </div>
 
     <div class="timeline">
@@ -80,27 +85,27 @@
         </div>
         <img src="./img/Timeline.png" alt="timeline">
         <div class="iconos">
-            <div class="iconos-block">
+            <div data-aos="fade-left"  class="iconos-block">
                 <img src="./img/icons8-silla-100.png" alt="icono">
                 <p>20:00 Hs</p>
                 <p>Toma tu lugar</p>
             </div>
-            <div class="iconos-block">
+            <div data-aos="fade-right"  class="iconos-block">
                 <img src="./img/anillos-de-boda 2.png" alt="icono">
                 <p>20:30 Hs</p>
                 <p>Ceremonia</p>
             </div>
-            <div class="iconos-block">
+            <div data-aos="fade-left"  class="iconos-block">
                 <img src="./img/brindis.png" alt="icono">
                 <p>21:30 Hs</p>
                 <p>Brindis</p>
             </div>
-            <div class="iconos-block">
+            <div data-aos="fade-right" class="iconos-block">
                 <img src="./img/cena.png" alt="icono">
                 <p>22:00 Hs</p>
                 <p>1er plato</p>
             </div>
-            <div class="iconos-block">
+            <div  data-aos="fade-left"  class="iconos-block">
                 <img src="./img/icons8-fiesta-100.png" alt="icono">
                 <p>00:00 Hs</p>
                 <p>Fiesta</p>
@@ -108,7 +113,7 @@
         </div>
     </div>
 
-    <div class="details">
+    <div data-aos="fade-up" class="details">
         <div class="deco">
             <div class="deco1"></div>
         </div>
@@ -126,9 +131,9 @@
         </div>
     </div>
 
-    <div class="rrss">
-        <h2>Let's party</h2>
-        <div class="block">
+    <div  class="rrss">
+        <h2 data-aos="fade-up">Let's party</h2>
+        <div data-aos="fade-up" class="block">
             <p>No hay boda sin fiesta! Compartí las fotos y videos de la noche etiquetandonos y ayudanos a elegir la música de la noche.</p>
             <div class="botones">
                 <a class="boton2" href="">PLAYLIST</a>
@@ -137,7 +142,7 @@
         </div>
     </div>
 
-    <div class="details">
+    <div data-aos="fade-up" class="details">
         <div class="deco">
             <div class="deco1"></div>
         </div>
@@ -153,7 +158,7 @@
             <div class="deco1"></div>
         </div>
     </div>
-    <div class="end">
+    <div data-aos="fade-in" class="end">
         <img src="./img/NOMBRESEND.png" alt="">
         <p>19.10.2O23</p>
     </div>
@@ -214,6 +219,10 @@
 
 <!-- Script para el desplazamiento suave -->
 
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
