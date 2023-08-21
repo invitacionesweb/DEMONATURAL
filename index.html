@@ -16,6 +16,13 @@
 </head>
 <body>
     
+<!-- Flecha de volver al inicio -->
+<div id="scroll-to-top">
+    <a href="#inicio">
+    <img src="./IMG/arrow.png" alt="Volver al inicio">
+    </a>
+</div>
+
     <header>
         <div class="date">
             <p>19</p>
@@ -79,27 +86,27 @@
         </div>
         <img src="./img/Timeline.png" alt="timeline">
         <div class="iconos">
-            <div data-aos="fade-left"  class="iconos-block">
+            <div data-aos="fade-up"  class="iconos-block">
                 <img src="./img/icons8-silla-100.png" alt="icono">
                 <p>20:00 Hs</p>
                 <p>Toma tu lugar</p>
             </div>
-            <div data-aos="fade-right"  class="iconos-block">
+            <div data-aos="fade-up"  class="iconos-block">
                 <img src="./img/anillos-de-boda 2.png" alt="icono">
                 <p>20:30 Hs</p>
                 <p>Ceremonia</p>
             </div>
-            <div data-aos="fade-left"  class="iconos-block">
+            <div data-aos="fade-up"  class="iconos-block">
                 <img src="./img/brindis.png" alt="icono">
                 <p>21:30 Hs</p>
                 <p>Brindis</p>
             </div>
-            <div data-aos="fade-right" class="iconos-block">
+            <div data-aos="fade-up" class="iconos-block">
                 <img src="./img/cena.png" alt="icono">
                 <p>22:00 Hs</p>
                 <p>1er plato</p>
             </div>
-            <div  data-aos="fade-left"  class="iconos-block">
+            <div  data-aos="fade-up"  class="iconos-block">
                 <img src="./img/icons8-fiesta-100.png" alt="icono">
                 <p>00:00 Hs</p>
                 <p>Fiesta</p>
@@ -165,11 +172,59 @@
     <script src="./countdown.js/countdown.js"></script>
 
 <!-- Script para el desplazamiento suave -->
+<!-- Script para el desplazamiento suave -->
+<script>
+    // Espera a que se cargue el DOM
+    document.addEventListener("DOMContentLoaded", function () {
+      const scrollToTopBtn = document.querySelector("#scroll-to-top");
+
+      scrollToTopBtn.addEventListener("click", () => {
+        // Comprueba la compatibilidad con "scroll-behavior"
+        if ("scrollBehavior" in document.documentElement.style) {
+          // Usa el desplazamiento suave del navegador
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+          });
+        } else {
+          // Desplazamiento suave de respaldo para navegadores antiguos
+          scrollToTop(0, 600);
+        }
+      });
+
+      // Función de desplazamiento suave de respaldo para navegadores antiguos
+      function scrollToTop(to, duration) {
+        const start = window.scrollY || document.documentElement.scrollTop;
+        const change = to - start;
+        const increment = 20;
+        let currentTime = 0;
+
+        const animateScroll = function () {
+          currentTime += increment;
+          const val = Math.easeInOutQuad(currentTime, start, change, duration);
+          window.scrollTo(0, val);
+          if (currentTime < duration) {
+            requestAnimationFrame(animateScroll);
+          }
+        };
+
+        Math.easeInOutQuad = function (t, b, c, d) {
+          t /= d / 2;
+          if (t < 1) return c / 2 * t * t + b;
+          t--;
+          return -c / 2 * (t * (t - 2) - 1) + b;
+        };
+
+        requestAnimationFrame(animateScroll);
+      }
+    });
+  </script>
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
     </script>
+
 
 </body>
 
