@@ -65,7 +65,7 @@
     align-items: center;
 }
    header img {
-       width: 80vw;
+       width: 40vw;
        margin: 14px 0;
    }
    header .date p{
@@ -181,6 +181,15 @@
  }
 .simply-word {
     font-size: 1.3rem;
+}
+
+
+.audiodiv {
+    width: 100%;
+    padding: 20px 0 0 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .lovestory {
@@ -367,6 +376,46 @@
     margin: 0;
 }
 
+
+footer {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    background-color: var(--color-secundario);
+    color: var(--color-principal);
+    padding: 40px 0;
+    flex-direction: column;
+    text-align: center;
+}
+footer .logo {
+    width: 40px;
+    padding: 0;
+    margin: 0;
+}
+footer .contenido{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    
+}
+footer img {
+    width: 60px;
+}
+.contenido ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    padding: 0;
+}
+
+.contenido a {
+    color: var(--color-principal);
+  }
+
+.contenido a:hover {
+    color: #ffffff;
+  }
   @media screen and (max-width: 768px) {
     header .date {
         display: flex;
